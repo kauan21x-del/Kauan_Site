@@ -1,0 +1,195 @@
+.index .logo {
+    color: #a8ff60;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 10px rgba(168, 255, 96, 0.4);
+    margin-bottom: 15px;
+}
+.index {
+    background-color: #080b08;
+}
+.index  {
+    color: rgb(244, 249, 244);
+    font-family: 'arial';
+}
+.index p {
+    color: rgb(244, 249, 244);
+    font-family: 'arial';   
+    text-align: center;
+    font-size: 30px;
+}
+.index header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.index header nav a{
+    background-color: #101310; 
+    border: 1px solid #a8ff60;
+    border-radius: 25px;
+    color: #a8ff60;
+    font-family: 'arial';
+    font-size: 18px;
+    padding: 12px 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.index header nav a:hover {
+    background-color: #a8ff60;
+    color: #101310;
+    box-shadow: 0px 0px 15px #a8ff60;
+    transform: translateY(-3px);
+}
+.card {
+    background-color: #101310;
+    color: #f7fbf9;
+    width: 65%;
+    min-height: 150px;
+    padding: 35px;
+    border: 1px solid #a8ff60;
+    border-radius: 20px;
+    margin: 30px auto;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px rgba(168, 255, 96, 0.15);
+}
+.index .card p {
+    color: #d9e0d7;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+}
+.kaka {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #a8ff60;
+    display: block;
+    margin: 30px auto;
+    box-shadow: 0px 0px 15px rgba(168, 255, 96, 0.4);
+}
+.index h1 {
+    text-align: center;
+}
+.index h1 {
+    text-align: center;
+    color: #a8ff60;
+    font-size: 38px;
+    text-shadow: 0px 0px 10px rgba(168, 255, 96, 0.3);
+}
+.index header {
+    text-align: center;
+    padding: 20px;
+}
+.index header h1 {
+    margin-bottom: 25px;
+}
+.index .card {
+    transition: 0.3s;
+}
+.index .card:hover {
+    box-shadow:  0px 0px 15px rgba(168, 255, 96, 0.5);
+                 0px 0px 35px rgba(168, 255, 96, 0.3);
+    border-color: #a8ffa8
+    transform: translateY(-4px);
+}
+.index {
+    background: radial-gradient(
+        circle at top,
+        #182518 0%
+        #080b08 60%
+    );
+    min-height: 100vh;
+}
+@media (max-width: 768px) {
+    .index .card {
+        width: 90%;
+        padding: 20px;
+    }
+    .index header nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .index header nav a {
+        font-size: 15px;
+        padding: 10px 16px;
+    }
+}
+
+Sobre
+
+.sobre h1 {
+    color: rgb(244, 249, 244);
+    font-family: 'arial';
+}
+.sobre header {
+    background-color: #00a84f;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sobre header nav a {
+    color: rgba(247, 244, 243, 0.838);
+    font-family: 'arial';
+    font-size: 25px;
+    padding: 5px;
+    margin-top: 0px;
+}
+.sobre header nav a:hover {
+    color: rgb(234, 15, 15);
+    font-family: 'arial';
+    font-size: 25px;
+    padding: 5px;
+    margin-top: 0px;
+}
+.sobre h2 {
+    color: rgb(244, 249, 244);
+    font-family: 'arial';
+}
+.sobre p.primeiro {
+    color: rgb(248, 251, 248);
+    font-family: 'arial';
+    font-size: 30px;
+    text-align: left;
+    margin: 40px;
+}
+.sobre p {
+    color: rgb(244, 249, 244);
+    font-family: 'arial';
+    
+}
+.sobre {
+    background-color: rgba(58, 22, 1, 0.838);
+}
+.sobre img {
+    border-radius: 0%;
+    border: 2px solid rgb(58, 22, 1, 0.838);
+    border-width: 5x;
+    display: block;
+    margin: 50px auto;
+}
+.sobre h2 {
+    background-color: rgba(58, 22, 1, 0.838);
+    border: 10px solid rgb(58, 22, 1, 0.838);
+    Border-radius: 10px;
+}
+.sobre table {
+    border: 4px solid rgb(27, 107, 27);
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 4px solid rgb(58, 22, 1, 0.838);
+    text-align: left;
+    padding: 8px;
+}
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
