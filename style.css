@@ -1,24 +1,80 @@
+/* ==========================================
+   1. MODO ESCURO (VARIÁVEIS PADRÃO)
+========================================== */
+:root {
+    --bg-dark: #070a07;         /* Fundo preto oficial */
+    --card-bg: #0d120e;        /* Fundo dos cards escuros */
+    --green-neon: #00ff44;     /* Verde neon brilhante */
+    --green-glow: rgba(0, 255, 68, 0.35);
+    --text-color: #ffffff;
+    --text-muted: #a0b0a5;
+    --border-color: #00ff44;
+    --font-title: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   2. INDEX / HOME STYLES
+========================================== */
+.index {
+    background: radial-gradient(
+        circle at top,
+        #0d170e 0%,
+        #070a07 60%
+    );
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    font-family: var(--font-body);
+    min-height: 100vh;
+}
+
 .index .logo {
-    color: #a8ff60;
+    color: var(--green-neon);
+    font-family: var(--font-title);
     font-size: 28px;
     text-align: center;
     letter-spacing: 3px;
-    text-shadow: 0px 0px 10px rgba(168, 255, 96, 0.4);
+    text-shadow: 0px 0px 10px var(--green-glow);
     margin-bottom: 15px;
 }
-.index {
-    background-color: #080b08;
-}
-.index  {
-    color: rgb(244, 249, 244);
-    font-family: 'arial';
-}
-.index p {
-    color: rgb(244, 249, 244);
-    font-family: 'arial';   
+
+.index h1 {
     text-align: center;
-    font-size: 30px;
+    color: var(--green-neon);
+    font-family: var(--font-title);
+    font-size: 38px;
+    text-shadow: 0px 0px 12px rgba(0, 255, 68, 0.4);
 }
+
+.index p {
+    color: #ffffff;
+    font-family: var(--font-body);
+    text-align: center;
+    font-size: 24px;
+}
+
+.index header {
+    text-align: center;
+    padding: 20px;
+}
+
+.index header h1 {
+    margin-bottom: 25px;
+}
+
 .index header nav {
     display: flex;
     flex-direction: row;
@@ -27,83 +83,562 @@
     gap: 25px;
     flex-wrap: wrap;
 }
-.index header nav a{
-    background-color: #101310; 
-    border: 1px solid #a8ff60;
+
+.index header nav a {
+    background-color: var(--card-bg);
+    border: 1px solid var(--green-neon);
     border-radius: 25px;
-    color: #a8ff60;
-    font-family: 'arial';
-    font-size: 18px;
+    color: var(--green-neon);
+    font-family: var(--font-title);
+    font-size: 16px;
     padding: 12px 25px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
+
 .index header nav a:hover {
-    background-color: #a8ff60;
-    color: #101310;
-    box-shadow: 0px 0px 15px #a8ff60;
+    background-color: var(--green-neon);
+    color: #070a07;
+    box-shadow: 0px 0px 15px var(--green-neon), 0px 0px 30px var(--green-neon);
     transform: translateY(-3px);
 }
-.card {
-    background-color: #101310;
-    color: #f7fbf9;
+
+.index .card {
+    background-color: var(--card-bg);
+    color: #ffffff;
     width: 65%;
     min-height: 150px;
     padding: 35px;
-    border: 1px solid #a8ff60;
+    border: 1px solid var(--green-neon);
     border-radius: 20px;
     margin: 30px auto;
     box-sizing: border-box;
-    box-shadow: 0px 0px 20px rgba(168, 255, 96, 0.15);
+    box-shadow: 0px 0px 15px rgba(0, 255, 68, 0.15);
+    transition: all 0.3s ease;
 }
+
 .index .card p {
-    color: #d9e0d7;
+    color: #d0e0d2;
     font-size: 18px;
     line-height: 1.7;
     text-align: center;
 }
+
+.index .card:hover {
+    box-shadow: 0px 0px 20px rgba(0, 255, 68, 0.4),
+                0px 0px 40px rgba(0, 255, 68, 0.2);
+    border-color: var(--green-neon);
+    transform: translateY(-4px);
+}
+
 .kaka {
     width: 180px;
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #a8ff60;
+    border: 4px solid var(--green-neon);
     display: block;
     margin: 30px auto;
-    box-shadow: 0px 0px 15px rgba(168, 255, 96, 0.4);
+    box-shadow: 0px 0px 20px rgba(0, 255, 68, 0.4);
 }
-.index h1 {
-    text-align: center;
-}
-.index h1 {
-    text-align: center;
-    color: #a8ff60;
-    font-size: 38px;
-    text-shadow: 0px 0px 10px rgba(168, 255, 96, 0.3);
-}
-.index header {
-    text-align: center;
-    padding: 20px;
-}
-.index header h1 {
-    margin-bottom: 25px;
-}
-.index .card {
-    transition: 0.3s;
-}
-.index .card:hover {
-    box-shadow:  0px 0px 15px rgba(168, 255, 96, 0.5);
-                 0px 0px 35px rgba(168, 255, 96, 0.3);
-    border-color: #a8ffa8
-    transform: translateY(-4px);
-}
-.index {
-    background: radial-gradient(
-        circle at top,
-        #182518 0%
-        #080b08 60%
-    );
+
+/* ==========================================
+   3. SOBRE (ABOUT) STYLES
+========================================== */
+body.sobre {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.6;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--bg-dark);
+    border-bottom: 2px solid var(--green-neon);
+    box-shadow: 0 2px 10px rgba(0, 255, 68, 0.2);
+    padding: 1.2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .primeiro {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--green-neon);
+    text-shadow: 0 0 8px var(--green-glow);
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    padding: 0.4rem 1.4rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav a:hover, nav a.active {
+    color: #ffffff;
+    border-color: var(--green-neon);
+    background-color: transparent;
+    box-shadow: 0 0 10px var(--green-glow);
+}
+
+main {
+    max-width: 1100px;
+    width: 90%;
+    margin: 2.5rem auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-info {
+    background-color: var(--card-bg);
+    border: 1px solid var(--green-neon);
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 0 10px rgba(0, 255, 68, 0.15);
+}
+
+.hero-card h1 {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+}
+
+.hero-card h1 span {
+    color: var(--green-neon);
+}
+
+.localizacao {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.localizacao strong {
+    color: #ffffff;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 2rem;
+}
+
+h2 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1.2rem;
+}
+
+.badges-list {
+    list-style: none;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.badges-list li {
+    background-color: transparent;
+    border: 1px solid var(--green-neon);
+    color: #ffffff;
+    padding: 0.4rem 1.4rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 0.5rem;
+}
+
+caption {
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: left;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+th {
+    font-family: var(--font-title);
+    color: var(--green-neon);
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 255, 68, 0.4);
+}
+
+td {
+    padding: 0.8rem 1rem;
+    color: #ffffff;
+    font-size: 1.05rem;
+    background-color: rgba(0, 255, 68, 0.03);
+    border-top: 1px solid rgba(0, 255, 68, 0.2);
+    border-bottom: 1px solid rgba(0, 255, 68, 0.2);
+}
+
+td:first-child {
+    border-left: 3px solid var(--green-neon);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-family: var(--font-title);
+    color: var(--green-neon);
+}
+
+td:last-child {
+    border-right: 1px solid rgba(0, 255, 68, 0.2);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    text-align: right;
+    color: var(--text-muted);
+    font-family: var(--font-title);
+}
+
+tr:hover td {
+    background-color: rgba(0, 255, 68, 0.08);
+}
+
+/* ==========================================
+   4. PROJETOS STYLES
+========================================== */
+body.projetos {
+    background-color: var(--bg-dark);
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.projeto-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--green-neon);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 255, 68, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 68, 0.35);
+}
+
+.projeto-img-box {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid rgba(0, 255, 68, 0.3);
+    overflow: hidden;
+}
+
+.projeto-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.projeto-card:hover .projeto-img-box img {
+    transform: scale(1.05);
+}
+
+.projeto-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex: 1;
+}
+
+.projeto-info h2 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    color: var(--green-neon);
+    margin-bottom: 0;
+}
+
+.projeto-info p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.tech-tags span {
+    font-family: var(--font-title);
+    font-size: 0.8rem;
+    color: #ffffff;
+    background-color: rgba(0, 255, 68, 0.08);
+    border: 1px solid var(--green-neon);
+    padding: 0.2rem 0.8rem;
+    border-radius: 12px;
+}
+
+/* ==========================================
+   5. CONTATO STYLES
+========================================== */
+body.contato {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    font-family: var(--font-body);
+}
+
+.contato-box {
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-family: var(--font-title);
+    color: var(--green-neon);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: rgba(0, 255, 68, 0.03);
+    border: 1px solid rgba(0, 255, 68, 0.3);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background-color: var(--card-bg);
+    color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--green-neon);
+    box-shadow: 0 0 10px rgba(0, 255, 68, 0.25);
+    background-color: rgba(0, 255, 68, 0.06);
+}
+
+.btn-enviar {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid var(--green-neon);
+    border-radius: 20px;
+    padding: 0.8rem 2rem;
+    font-family: var(--font-title);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+.btn-enviar:hover {
+    background-color: var(--green-neon);
+    color: #070a07;
+    box-shadow: 0 0 15px var(--green-neon);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   6. MODO CLARO (LIGHT MODE) - CORRIGIDO
+========================================== */
+body.light-mode {
+    --bg-dark: #f0f4f1;
+    --card-bg: #ffffff;
+    --green-neon: #00aa2c;
+    --text-color: #1a1a1a;
+    background-color: var(--bg-dark) !important;
+    color: var(--text-color) !important;
+}
+/* Botão Enviar no Modo Claro */
+body.light-mode .btn-enviar {
+    color: #1a1a1a !important;            /* Texto escuro no estado normal */
+    border-color: var(--green-neon) !important;
+}
+/* Ajuste do campo Select e das suas opções no Modo Claro */
+body.light-mode .form-group select {
+    color: #1a1a1a !important;            /* Cor do texto do select selecionado */
+    background-color: #ffffff !important;  /* Fundo do campo */
+}
+
+body.light-mode .form-group select option {
+    background-color: #ffffff !important;  /* Fundo das opções do menu suspenso */
+    color: #1a1a1a !important;            /* Texto das opções */
+}
+/* Ajuste da página inicial (Index) no Modo Claro */
+body.light-mode.index,
+body.light-mode .index {
+    background: #f0f4f1 !important;        /* Fundo claro para toda a página inicial */
+    background-color: #f0f4f1 !important;
+    color: #1a1a1a !important;
+}
+
+body.light-mode .index p {
+    color: #1a1a1a !important;            /* Texto "Bem-vindo ao meu site!" escuro */
+}
+
+body.light-mode .btn-enviar:hover {
+    background-color: var(--green-neon) !important;
+    color: #ffffff !important;            /* Texto branco ao passar o rato por cima */
+    box-shadow: 0 0 15px var(--green-neon) !important;
+}
+
+/* Fundo do Header no modo claro para não vazar os cards */
+body.light-mode header {
+    background-color: #ffffff !important;
+    border-bottom: 2px solid var(--green-neon);
+}
+
+/* Texto dos links e botão ativo no menu */
+body.light-mode nav a {
+    color: #1a1a1a !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+body.light-mode nav a:hover,
+body.light-mode nav a.active {
+    color: #ffffff !important;
+    background-color: var(--green-neon) !important;
+    border-color: var(--green-neon) !important;
+}
+
+/* Cards e Badges / Pílulas "O que curto" */
+body.light-mode .card,
+body.light-mode .card-info,
+body.light-mode .projeto-card {
+    background-color: var(--card-bg) !important;
+    border-color: var(--green-neon) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .badges-list li {
+    color: #1a1a1a !important; /* Força o texto das pílulas para escuro */
+    border-color: var(--green-neon) !important;
+    background-color: rgba(0, 170, 44, 0.08) !important;
+}
+
+/* Títulos, Textos e Tabelas */
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3,
+body.light-mode .hero-card h1,
+body.light-mode .logo,
+body.light-mode header .primeiro {
+    color: var(--green-neon) !important;
+    text-shadow: none !important;
+}
+
+body.light-mode p,
+body.light-mode td,
+body.light-mode .localizacao,
+body.light-mode .localizacao strong {
+    color: var(--text-color) !important;
+}
+
+/* Correção do formulário no Modo Claro */
+body.light-mode .form-group input,
+body.light-mode .form-group select,
+body.light-mode .form-group textarea {
+    color: #1a1a1a !important;
+    background-color: #ffffff !important;
+    border-color: rgba(0, 170, 44, 0.4) !important;
+}
+
+body.light-mode .form-group select option {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+}
+body.light-mode td:first-child {
+    color: var(--green-neon) !important;
+}
+
+/* Estilo do Botão de Alternar Tema */
+.btn-theme {
+    background-color: transparent;
+    border: 1px solid var(--green-neon);
+    color: var(--green-neon);
+    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-theme:hover {
+    background-color: var(--green-neon);
+    color: #070a07;
+    box-shadow: 0 0 12px var(--green-neon);
+    transform: scale(1.1);
 }
 @media (max-width: 768px) {
     .index .card {
@@ -118,78 +653,13 @@
         font-size: 15px;
         padding: 10px 16px;
     }
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-Sobre
-
-.sobre h1 {
-    color: rgb(244, 249, 244);
-    font-family: 'arial';
-}
-.sobre header {
-    background-color: #00a84f;
-    padding: 10px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.sobre header nav a {
-    color: rgba(247, 244, 243, 0.838);
-    font-family: 'arial';
-    font-size: 25px;
-    padding: 5px;
-    margin-top: 0px;
-}
-.sobre header nav a:hover {
-    color: rgb(234, 15, 15);
-    font-family: 'arial';
-    font-size: 25px;
-    padding: 5px;
-    margin-top: 0px;
-}
-.sobre h2 {
-    color: rgb(244, 249, 244);
-    font-family: 'arial';
-}
-.sobre p.primeiro {
-    color: rgb(248, 251, 248);
-    font-family: 'arial';
-    font-size: 30px;
-    text-align: left;
-    margin: 40px;
-}
-.sobre p {
-    color: rgb(244, 249, 244);
-    font-family: 'arial';
-    
-}
-.sobre {
-    background-color: rgba(58, 22, 1, 0.838);
-}
-.sobre img {
-    border-radius: 0%;
-    border: 2px solid rgb(58, 22, 1, 0.838);
-    border-width: 5x;
-    display: block;
-    margin: 50px auto;
-}
-.sobre h2 {
-    background-color: rgba(58, 22, 1, 0.838);
-    border: 10px solid rgb(58, 22, 1, 0.838);
-    Border-radius: 10px;
-}
-.sobre table {
-    border: 4px solid rgb(27, 107, 27);
-    border-collapse: collapse;
-    width: 100%;
-}
-td, th {
-    border: 4px solid rgb(58, 22, 1, 0.838);
-    text-align: left;
-    padding: 8px;
-}
-.projetos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+@media (max-width: 600px) {
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
 }

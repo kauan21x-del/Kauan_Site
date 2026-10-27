@@ -2,34 +2,75 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Inicio | Kauan</title> 
+    <script src="script.js"></script>
+</body>
+</html>
+    <!-- Fontes Gamer do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>Projetos | Kauan</title> 
 </head>
 <body class="projetos">
     <header>
-        <p class="1"><strong>Bem-vindo ao meu site!</strong></p>
+        <p class="primeiro"><strong>K4UAN.DEV</strong></p>
         <nav>
             <a href="index.html">Home</a>
             <a href="sobre.html">Sobre</a>
-            <a href="projetos.html">Projetos</a>
+            <a href="projetos.html" class="active">Projetos</a>
             <a href="contato.html">Contato</a>
+            <button id="theme-toggle" class="btn-theme" aria-label="Alternar tema">🌙</button>
         </nav>
     </header>
-        <main>
-           <h1>Meus Projetos</h1>
-           <div class="projetos">
-        <h2>Protótipos do figma</h2>
-        <p>As telas do meu site.</p>    
-</article>
-    <article>
-        <h2>Página sobre mim</h2>
-        <p>Minha primeira página em HTML.</p>
-    </article>
-           </div>
-        </main>
-    
-      <footer>
-        <p>2026- <em>Kauan</em></p>
+
+    <main>
+        <section class="card-info hero-card">
+            <h1>Meus <span>Projetos</span></h1>
+            <p>Confira abaixo alguns dos projetos e interfaces que desenvolvi.</p>
+        </section>
+
+        <!-- Galeria em Grid para as Fotos dos Projetos -->
+        <div class="projetos-grid">
+
+            <!-- Card Projeto 1 -->
+            <article class="projeto-card">
+                <div class="projeto-img-box">
+                    <!-- Substitua o src pela imagem do seu projeto (ex: img/projeto1.png) -->
+                    <img src="https://via.placeholder.com/600x350/0d120e/00ff44?text=Next+Stop+App" alt="Projeto Next Stop">
+                </div>
+                <div class="projeto-info">
+                    <h2>Next Stop App</h2>
+                    <p>Aplicativo mobile desenvolvido em Flutter com integração ao banco de dados Supabase e autenticação de usuários.</p>
+                    <div class="tech-tags">
+                        <span>Flutter</span>
+                        <span>Supabase</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card Projeto 2 -->
+            <article class="projeto-card">
+                <div class="projeto-img-box">
+                    <!-- Substitua o src pela imagem do seu site -->
+                    <img src="https://via.placeholder.com/600x350/0d120e/00ff44?text=Site+Pessoal+HTML/CSS" alt="Site Pessoal">
+                </div>
+                <div class="projeto-info">
+                    <h2>Site Pessoal HTML/CSS</h2>
+                    <p>Minha primeira página em HTML e CSS com layout responsivo e estética visual inspirada em games.</p>
+                    <div class="tech-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kauan - Todos os direitos reservados</p>
     </footer>
 </body>
 </html>

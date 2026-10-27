@@ -2,52 +2,77 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</body>
+</html>
+    <!-- Fontes Gamer do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <title>Contato | Kauan</title> 
 </head>
 <body class="contato">
     <header>
-        <p><strong>Kauan</strong></p>
+        <p class="primeiro"><strong>K4UAN.DEV</strong></p>
         <nav>
             <a href="index.html">Home</a>
             <a href="sobre.html">Sobre</a>
             <a href="projetos.html">Projetos</a>
-            <a href="contato.html">Contato</a>
+            <a href="contato.html" class="active">Contato</a>
+            <button id="theme-toggle" class="btn-theme" aria-label="Alternar tema">🌙</button>
         </nav>
     </header>
-        <main>
-            <h1>Fale comigo</h1>
-            <form>
-                <p>
+
+    <main>
+        <section class="card-info hero-card">
+            <h1>Fale <span>comigo</span></h1>
+            <p>Preencha os campos abaixo para enviar uma mensagem ou solicitar um orçamento.</p>
+        </section>
+
+        <!-- Container do Formulário -->
+        <section class="card-info contato-box">
+            <form action="https://formspree.io/f/maeeozvz" method="POST" class="contato-form">
+                <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" required>
-                </p>
-                <p>
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </p>
-                <p>
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" name="telefone">
-                </p>
-                <p>
-                    <label for="assunto">Assunto</label>
-                    <select id="assunto">Assunto
-                    <option>Orçamento</option>
-                    <option>Dúvida</option>
-                    <option>Outro</option>
-                    <option>Feedback</option>
-                    </select>
-                </p>
-                <p>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                    </div>
+                </div>
+
+                <div class="form-group">
+    <label for="assunto">Assunto</label>
+    <select id="assunto" name="assunto" required>
+        <option value="" disabled selected>Selecione um assunto</option>
+        <option value="orcamento">Orçamento</option>
+        <option value="duvida">Dúvida</option>
+        <option value="outro">Outro</option>
+    </select>
+</div>
+
+                <div class="form-group">
                     <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem"></textarea>
-                </p>
-                <button type="submit">Enviar</button>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar</button>
             </form>
-        </main>
+        </section>
+    </main>
+
     <footer>
-        <p>2026- <em>Kauan</em></p>
+        <p>&copy; 2026 Kauan - Todos os direitos reservados</p>
     </footer>
 </body>
 </html>
